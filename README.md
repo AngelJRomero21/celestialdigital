@@ -1,5 +1,5 @@
 # celestialdigital
-En Construccion!
+La Señal que Viene del Cielo!
 
 
 
@@ -8,7 +8,7 @@ Contacto:
 WhatsApp: +58 4168578289
 
 
-Telegram: +58 4168578289
+Telegram: @angeljromero21
 
 
 Facebook: @cromstudio21
