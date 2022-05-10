@@ -14,7 +14,7 @@ new Vue({
           artist: "La Señal que viene del Cielo",
           cover: "./01.jpg",
           source: "https://node-15.zeno.fm/9xze1eypbrzuv",
-          url: "/acerca-de",
+          url: "https://celestialdigital.ml/",
           favorited: false
         },
       ],
