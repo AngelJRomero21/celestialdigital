@@ -12,7 +12,7 @@ new Vue({
         {
           name: "Celestial 106.3FM",
           artist: "La señal que viene del Cielo",
-          cover: "./01.jpg",
+          cover: "/assets/img/01.jpg",
           source: "https://node-15.zeno.fm/9xze1eypbrzuv",
           url: "https://celestialdigital.ml/",
           favorited: false
