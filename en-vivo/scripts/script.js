@@ -11,7 +11,7 @@ new Vue({
       tracks: [
         {
           name: "Celestial 106.3FM",
-          artist: "La Señal que viene del Cielo",
+          artist: "La señal que viene del Cielo",
           cover: "./01.jpg",
           source: "https://node-15.zeno.fm/9xze1eypbrzuv",
           url: "https://celestialdigital.ml/",
