@@ -1,7 +1,7 @@
 # Celestial Digital
 La Señal que Viene del Cielo!
 
-![](https://raw.githubusercontent.com/AngelJRomero21/celestialdigital/main/assets/img/Screenshot/Celestial%20Digital%20En%20Vivo.png)
+![CelestialDigital En Vivo](https://raw.githubusercontent.com/AngelJRomero21/celestialdigital/main/assets/img/Screenshot/Celestial%20Digital%20En%20Vivo.png)
 
 -----------------------------
 
