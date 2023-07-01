@@ -16,7 +16,8 @@
       line-height: 1.5;
     }
     /* Estilos del encabezado */
-    header {
+     /* Estilos del encabezado */
+     header {
       background-color: #333;
       color: #fff;
       text-align: center;
@@ -26,6 +27,9 @@
       font-size: 28px;
       margin-bottom: 10px;
       font-family: 'Dopestyle', Arial, sans-serif;
+    }
+    header h1 span {
+      font-family: 'Emmett', Arial, sans-serif;
     }
     header p {
       font-size: 16px;
@@ -152,12 +156,25 @@
     }
   </style>
 
-<link href="fonts/dopestyle.woff" rel="preload" as="font" type="font/woff" crossorigin>
+<style>
+  @font-face {
+    font-family: 'Dopestyle';
+    src: url('fonts/dopestyle.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Emmett';
+    src: url('fonts/emmett.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+</style>
 
 </head>
 <body>
   <header>
-    <h1>Celestial 106.3FM</h1>
+    <h1>Celestial <span>106.3FM</span></h1>
     <p>La señal que viene del Cielo</p>
   </header>
   <nav id="menu">
