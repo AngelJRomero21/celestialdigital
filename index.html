@@ -5,59 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Celestial 106.3FM</title>
   <style>
-    /* Estilos generales */
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.5;
+      margin: 0;
+      padding: 0;
     }
-    /* Estilos del encabezado */
-     header {
+    header {
       background-color: #333;
       color: #fff;
       text-align: center;
       padding: 20px;
     }
     header h1 {
-      font-size: 50px;
-      margin-bottom: 10px;
-      font-family: 'Dopestyle', Arial, sans-serif;
-    }
-    header h1 span {
-      font-size: 28px;
-      font-family: 'Emmett', Arial, sans-serif;
+      font-size: 36px;
+      margin: 0;
+      font-family: 'Dopestyle', cursive;
     }
     header p {
-      font-size: 16px;
-      color: #ddd;
+      font-size: 18px;
+      margin: 10px 0;
     }
-    /* Estilos del menú */
-    nav {
-      background-color: #222;
+    #menu {
+      background-color: #555;
+      text-align: center;
+      padding: 10px;
     }
     #menu ul {
       list-style: none;
-      display: flex;
-      justify-content: center;
-      padding: 10px;
+      padding: 0;
+      margin: 0;
     }
     #menu ul li {
-      margin-right: 20px;
+      display: inline-block;
+      margin-right: 10px;
     }
     #menu ul li a {
       color: #fff;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 18px;
+      padding: 5px 10px;
       transition: color 0.3s;
     }
     #menu ul li a:hover {
       color: #bbb;
     }
-    /* Estilos de los bloques de contenido */
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -67,54 +61,32 @@
       margin-bottom: 40px;
     }
     section h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
-      color: #333;
+      font-size: 28px;
+      margin: 0 0 20px;
+      font-family: 'Emmett', cursive;
     }
     section p {
       font-size: 16px;
-      color: #555;
+      line-height: 1.5;
+      margin-bottom: 10px;
     }
-    /* Estilos de las tarjetas */
     .tarjetas-container {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 20px;
     }
     .tarjeta {
-      width: calc(25% - 20px);
-      background-color: #f4f4f4;
-      padding: 20px;
-      margin-bottom: 20px;
+      background-color: #f2f2f2;
       border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
-    }
-    .tarjeta:hover {
-      transform: translateY(-5px);
+      padding: 20px;
     }
     .tarjeta img {
       width: 100%;
-      max-height: 150px;
-      object-fit: cover;
       border-radius: 5px;
       margin-bottom: 10px;
     }
-    .tarjeta h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      color: #333;
-    }
-    .tarjeta p {
-      font-size: 16px;
-      color: #555;
-    }
-    /* Estilos del reproductor */
     .reproductor {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #333;
+      background-color: #222;
       color: #fff;
       padding: 10px;
       margin-bottom: 20px;
@@ -150,61 +122,59 @@
       }
     }
     .animated {
-      animation-fill-mode: both;
       animation-duration: 1s;
-      animation-delay: 0.2s;
+      animation-fill-mode: both;
+      opacity: 0;
+    }
+    .animated.visible {
+      opacity: 1;
+      animation-name: fadeIn;
+    }
+    /* Media queries */
+    @media screen and (max-width: 768px) {
+      header h1 {
+        font-size: 24px;
+      }
+      header p {
+        font-size: 14px;
+      }
+      #menu ul li a {
+        font-size: 14px;
+      }
+      section h2 {
+        font-size: 22px;
+      }
+      section p {
+        font-size: 14px;
+      }
     }
   </style>
-
-<style>
-  @font-face {
-    font-family: 'Dopestyle';
-    src: url('fonts/dopestyle.woff') format('woff'),
-         url('fonts/dopestyle.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Emmett';
-    src: url('fonts/emmett.woff') format('woff'),
-         url('fonts/emmett.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-</style>
-
 </head>
 <body>
   <header>
-    <h1>Celestial <span>106.3FM</span></h1>
-    <p>La señal que viene del Cielo</p>
+    <h1>Celestial 106.3FM</h1>
+    <p>La mejor música cristiana las 24 horas del día</p>
   </header>
-  <nav id="menu">
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#informacion">Información de la Radio</a></li>
-      <li><a href="#programacion">Programación</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-      <li><a href="/en-vivo/">En Vivo</a></li>
-    </ul>
-  </nav>
   <div class="container">
-    <section id="inicio" class="animated">
-      <h2>Inicio</h2>
-      <p>Bienvenidos a Celestial 106.3 FM, La señal que viene del Cielo.</p>
-      <p>Transmitiendo desde Guanare para el Mundo.</p>
+    <nav id="menu">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#programas">Programas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <section id="inicio" class="animated visible">
+      <div class="reproductor">
+        <p>Reproductor de música aquí</p>
+      </div>
+      <h2>Bienvenido a Celestial 106.3FM</h2>
+      <p>Texto de bienvenida...</p>
     </section>
-    <section id="informacion" class="animated">
-      <h2>Información de la Radio</h2>
-      <p>La radio Celestial 106.3FM es una estación de radio que transmite música inspiradora y mensajes edificantes para elevar el espíritu. Nos dedicamos a brindar entretenimiento de calidad y contenido positivo para nuestros oyentes.</p>
-    </section>
-    <section id="programacion" class="animated">
-      <h2>Programación</h2>
-      <p>En Celestial 106.3FM, ofrecemos una amplia variedad de programas que van desde música inspiradora hasta enseñanzas y predicas motivadoras. Descubre nuestros programas destacados:</p>
-     <br>
+    <section id="programas" class="animated">
+      <h2>Programas</h2>
       <div class="tarjetas-container">
         <div class="tarjeta">
-          <img src="assets/img/CodigoSinergia.png" alt="Codigo Sinergia">
+          <img src="assets/img/codigo sinergia.jpg" alt="Codigo Sinergia">
           <h3>Codigo Sinergia</h3>
           <p>Alegra tus tardes con la mejor música, consejos y premios y una palabra departe de Dios. Conducido por Paulina Vargas y Jesús Jiménez todos los sábados a las 6:00pm</p>
         </div>
@@ -227,16 +197,13 @@
     </section>
     <section id="contacto" class="animated">
       <h2>Contacto</h2>
-      <p>Si deseas contactarnos, puedes hacerlo a través de los siguientes medios:</p>
-      <ul>
-        <li>Teléfono: 123456789</li>
-        <li>Email: contacto@celestial1063fm.com</li>
-        <li>Redes Sociales: <a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">WhatsApp</a></li>
-      </ul>
+      <p>Si tienes alguna pregunta o comentario, por favor contáctanos:</p>
+      <p>Teléfono: 1234567890</p>
+      <p>Email: info@celestial1063fm.com</p>
     </section>
   </div>
   <footer>
-    <p>&copy; 2022 Celestial 106.3FM | Desarrollado con ❤️ por Crom Studio</p>
+    <p>Todos los derechos reservados &copy; 2023 Celestial 106.3FM | <a href="#">Política de privacidad</a></p>
   </footer>
 </body>
 </html>
