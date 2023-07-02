@@ -183,23 +183,28 @@
 
     /* Inicio */
 
-  .inicio-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    .contenido-inicio {
+    display: flex;
+    align-items: center;
   }
 
-  .inicio-texto {
-  flex: 1;
-  margin-right: 20px;
+  .imagen-inicio {
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+    overflow: hidden;
+    border-radius: 5px;
   }
 
-  .inicio-imagen img {
-  max-width: 100%;
-  height: auto;
+  .imagen-inicio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
-
+  .texto-inicio {
+    flex-grow: 1;
+  }
     
     /* Animaciones */
     @keyframes fadeIn {
@@ -277,16 +282,16 @@
   <div class="container">
     <section id="inicio" class="animated">
       <h2>Inicio</h2>
-      <div class="inicio-container">
-        <div class="inicio-texto">
+      <div class="contenido-inicio">
+        <div class="texto-inicio">
           <p>Bienvenidos a Celestial 106.3 FM, La señal que viene del Cielo.</p>
           <p>Transmitiendo desde Guanare para el Mundo.</p>
         </div>
-        <div class="inicio-imagen">
-          <img src="assets/img/background.jpg" alt="Imagen de Inicio">
+        <div class="imagen-inicio">
+          <img src="assets/img/imagen_inicio.jpg" alt="Imagen de Inicio">
         </div>
       </div>
-    </section>    
+    </section>      
     <section id="informacion" class="animated">
       <h2>Información de la Radio</h2>
       <p>La radio Celestial 106.3FM es una estación de radio que transmite música inspiradora y mensajes edificantes para elevar el espíritu. Nos dedicamos a brindar entretenimiento de calidad y contenido positivo para nuestros oyentes.</p>
