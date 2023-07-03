@@ -1,25 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Celestial TV EN VIVO</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celestial TV en Vivo</title>
   <style>
-    /* Estilo para ocultar el logo de Twitch */
-    .tw-c-text-overlay__logo {
-      display: none !important;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body, html {
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    #reproductor {
+      width: 100%;
+      height: 100%;
+      float: left;
+    }
+    
+
+    
+    iframe {
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
 <body>
-  <div id="twitch-embed"></div>
-
-  <script src="https://embed.twitch.tv/embed/v1.js"></script>
-  <script type="text/javascript">
-    new Twitch.Embed("twitch-embed", {
-      channel: "celestialdigital",
-      layout: "video",
-      muted: false, // Reproducir con sonido
-      autoplay: true // Reproducir automáticamente
-    });
-  </script>
+  <div id="reproductor">
+    <iframe src="https://player.twitch.tv/?channel=celestialdigital&parent=celestialdigital.ml" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
+  </div>
+ 
 </body>
 </html>
