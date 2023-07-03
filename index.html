@@ -260,6 +260,26 @@
     }
   </style>
 
+<style>
+  .galeria-contenedor {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .galeria-imagenes {
+    display: flex;
+    transition: transform 1s ease-in-out;
+  }
+
+  .galeria-imagenes img {
+    width: 100%;
+    height: auto;
+  }
+</style>
+
+
+
 </head>
 
 <body>
@@ -320,6 +340,17 @@
         </div>
       </div>
     </section>
+    <section id="galeria" class="animated">
+      <h2>Galería</h2>
+      <div class="galeria-contenedor">
+        <div class="galeria-imagenes">
+          <img src="ruta-a-imagen-1.jpg" alt="Imagen 1">
+          <img src="ruta-a-imagen-2.jpg" alt="Imagen 2">
+          <img src="ruta-a-imagen-3.jpg" alt="Imagen 3">
+          <!-- se agregaran las imagenes segun sea necesario -->
+        </div>
+      </div>
+    </section>    
     <section id="contacto" class="animated">
       <h2>Contacto</h2>
       <p>Si deseas contactarnos, puedes hacerlo a través de los siguientes medios:</p>
@@ -334,5 +365,27 @@
     <p>© 2022 Celestial 106.3FM | Desarrollado con ❤️ por Crom Studio</p>
   </footer>
 
+<!--  Script Galeria -->
+
+  <script>
+    function moverGaleria() {
+      const galeria = document.querySelector('.galeria-imagenes');
+      const primerImagen = galeria.firstElementChild;
+  
+      galeria.style.transform = `translateX(-${primerImagen.clientWidth}px)`;
+  
+      setTimeout(() => {
+        galeria.appendChild(primerImagen);
+        galeria.style.transition = 'none';
+        galeria.style.transform = 'translateX(0)';
+        setTimeout(() => {
+          galeria.style.transition = 'transform 1s ease-in-out';
+        }, 50);
+      }, 4000);
+    }
+  
+    setInterval(moverGaleria, 5000);
+  </script>
+  
 </body>
 </html>
