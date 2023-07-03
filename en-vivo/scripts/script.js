@@ -1,3 +1,21 @@
+// Verificar si se está accediendo desde un dispositivo móvil
+function isMobileDevice() {
+  return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+}
+
+// Redirigir a la aplicación de Play Store si se está en un dispositivo móvil
+function redirectToPlayStore() {
+  window.location.href = "https://play.google.com/store/apps/details?id=celestial1063.fm";
+}
+
+// Verificar si se está accediendo desde un dispositivo móvil y redirigir
+if (isMobileDevice()) {
+  redirectToPlayStore();
+}
+
+
+
+
 new Vue({
   el: "#app",
   data() {
