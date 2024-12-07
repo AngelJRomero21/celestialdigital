@@ -32,7 +32,7 @@ new Vue({
           artist: "La señal que viene del Cielo",
           cover: "/assets/img/Celestial_300x300.png",
           source: "http://stream.zeno.fm/cnczemratcouv",
-          url: "https://celestialdigital.ml/",
+          url: "https://celestial1063fm.cromstudio.com.ve/",
           favorited: false
         },
       ],
